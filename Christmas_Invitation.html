@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Christmas Party Invitation</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #0b1a2b;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+.container {
+    position: relative;
+    z-index: 2;
+    padding-top: 40px;
+}
+img {
+    width: 200px;
+    border-radius: 12px;
+}
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+p {
+    font-size: 20px;
+}
+/* Snow effect */
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.snow span {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0.2;
+    }
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <img src="data:image/jpeg;base64,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">
+    <h1>🎄 Christmas Party 2025 🎅</h1>
+    <p>📅 Date: 26 Dec 2025 (Friday)</p>
+    <p>⏰ Time: 7pm</p>
+    <p>📍 Venue: 15, Jalan 8/119, Taman Taynton View, 56000 Kuala Lumpur</p>
+    <p><a href="https://maps.app.goo.gl/UtbGUgaTdt2bVrcp7?g_st=iw" style="color: #ffdd55">➡ Google Maps</a></p>
+</div>
+
+<div class="snow" id="snow"></div>
+
+<script>
+// Create 80 snowflakes
+const snowContainer = document.getElementById("snow");
+for (let i = 0; i < 80; i++) {
+    let s = document.createElement("span");
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.animationDuration = 2 + Math.random() * 4 + "s";
+    s.style.opacity = 0.5 + Math.random() * 0.5;
+    s.style.transform = "scale(" + (0.5 + Math.random()) + ")";
+    snowContainer.appendChild(s);
+}
+</script>
+
+</body>
+</html>
