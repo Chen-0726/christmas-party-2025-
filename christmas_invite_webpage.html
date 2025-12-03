@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FMX Christmas Party 2025 Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+ body {
+   margin: 0;
+   font-family: 'Montserrat', sans-serif;
+   background: #000 !important;
+   color: #fff;
+   text-align: center;
+ }
+ .overlay {
+   padding: 60px 20px;
+ }
+ h1 {
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+ }
+ .card {
+   background: rgba(255, 255, 255, 0.12);
+   border-radius: 16px;
+   padding: 25px;
+   max-width: 500px;
+   margin: 0 auto;
+   backdrop-filter: blur(6px);
+ }
+ .info {
+   font-size: 1.1rem;
+   line-height: 1.7;
+ }
+ a.button, button.audioBtn {
+   display: inline-block;
+   margin-top: 20px;
+   padding: 12px 22px;
+   background: #ff3b3b;
+   border-radius: 8px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 700;
+   border: none;
+   cursor: pointer;
+ }
+ @keyframes fall {
+   to { transform: translateY(110vh); }
+ }
+</style>
+</head>
+<body>
+<div class="overlay">
+  <h1>🎄 Christmas Party 2025 🎅</h1>
+  <div class="card">
+    <p class="info">
+      <strong>📅 Date:</strong> 26 Dec 2025 (Friday)<br>
+      <strong>⏰ Time:</strong> 7:00 PM<br>
+      <strong>📍 Venue:</strong> 15, Jalan 8/119,<br> Taman Taynton View, 56000 Kuala Lumpur
+    </p>
+
+    <button class="audioBtn" onclick="toggleBGM()">▶ Play Music</button>
+    <audio id="bgm">
+      <source src="jingle-bells-444574.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+    <a class="button" href="https://maps.app.goo.gl/UtbGUgaTdt2bVrcp7?g_st=iw" target="_blank">🗺️ Open Google Maps</a>
+
+    <br><br>
+    <img src="images.jpg" style="width:60%; border-radius:12px; margin-top:20px;" />
+  </div>
+</div>
+
+<script>
+// Snow effect
+const snowContainer = document.createElement('div');
+snowContainer.style.position = 'fixed';
+snowContainer.style.top = 0;
+snowContainer.style.left = 0;
+snowContainer.style.width = '100%';
+snowContainer.style.height = '100%';
+snowContainer.style.pointerEvents = 'none';
+document.body.appendChild(snowContainer);
+
+function createSnow() {
+  const snow = document.createElement('div');
+  snow.innerHTML = '❄';
+  snow.style.position = 'absolute';
+  snow.style.top = '-20px';
+  snow.style.left = Math.random() * window.innerWidth + 'px';
+  snow.style.fontSize = Math.random() * 10 + 15 + 'px';
+  snow.style.opacity = Math.random();
+  snow.style.animation = 'fall 5s linear infinite';
+  snowContainer.appendChild(snow);
+  setTimeout(() => snow.remove(), 5000);
+}
+setInterval(createSnow, 200);
+
+// Play / Pause BGM
+function toggleBGM() {
+  const audio = document.getElementById('bgm');
+  const btn = document.querySelector('.audioBtn');
+
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = '⏸ Pause Music';
+  } else {
+    audio.pause();
+    btn.textContent = '▶ Play Music';
+  }
+}
+</script>
+
+<!-- Flying Santa Animation -->
+<img id="santa" src="santa-riding-reindeer-rudolph-copy-space.png">
+
+<script>
+// Santa flying animation
+const santa = document.getElementById('santa');
+santa.style.position = 'fixed';
+santa.style.top = '40%';
+santa.style.left = '-80px';
+santa.style.width = '200px';
+santa.style.height = 'auto';
+santa.style.zIndex = '9999';
+santa.style.animation = 'flySanta 12s linear infinite';
+</script>
+
+<style>
+#santa {
+  text-shadow: 0 0 8px rgba(255,255,255,0.9);
+}
+@keyframes flySanta {
+  0% { transform: translateX(-100px); }
+  50% { transform: translateX(110vw) translateY(-20px); }
+  100% { transform: translateX(-100px); }
+}
+/* Inject "You Are Invited!" under title */
+h1::after {
+  content: "✨ You Are Invited! ✨";
+  display: block;
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #ffdf5e;
+  text-shadow: 0 0 6px rgba(255,215,0,0.8);
+}
+</style>
+</body>
+</html>
